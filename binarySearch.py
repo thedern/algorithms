@@ -1,3 +1,8 @@
+"""
+this program illustrates the power of a binary search versus a simple search.
+Enter any number for 'lsMax' and then any number between 1 and lsMax in the function call.  The loop counter will tell you how many iterations it took to locate your number. The results are truly impressive.  Page 9 in Grokking algoritms
+"""
+
 # create list
 ls1 = []
 counter = 1

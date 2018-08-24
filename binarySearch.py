@@ -1,3 +1,4 @@
+# create list
 ls1 = []
 counter = 1
 lsMax = 1000

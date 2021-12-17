@@ -12,37 +12,50 @@ while counter <= lsMax:
     counter += 1
 print("list is {}".format(ls1))
 
-# binary search
 
+def binary_search(ls, item):
+    """
 
-def binary_search(list, item):
+    :param list: list of possible numbers
+    :type list: list
+    :param item: number to search
+    :type item: int
+    :return:
+    :rtype:
+    """
     low = 0
     loop = 0
-    print("item is {}".format(item))
-    # lists start at idex 0, so len is len -1
-    high = len(list) - 1
-    print("high index is.{}".format(high))
+    print(f"item is {item}")
+    # lists start at index 0, so len is len -1
+    high = len(ls) - 1
+    print(f"low index is: {low}")
+    print(f"high index is: {high}")
 
     while low <= high:
         loop += 1
-        print("loop {}".format(loop))
+        print(f"loop {loop}")
 
         # floor division to round down
         mid = (low + high) // 2
-        print("mid index is {}".format(mid))
-        guess = list[mid]
-        print("guess is {}".format(guess))
+        # set guess to the value of the mid index
+        guess = ls[mid]
+        print(f"guess is {guess}")
 
         if guess == item:
             return mid
-        # if guess is greater than the number, go down in index
+        # if guess is greater than the number, reset the high index to the mid index - 1
         if guess > item:
             high = mid - 1
-        # if guess is lower than the number, go up in index
+        # if guess is lower than the number, reset the low index to the mid index + 1
         else:
             low = mid + 1
     return None
 
 
-# enter any number between 1 and lsMax
-print(binary_search(ls1, 31))
+def main():
+    # enter any number between 1 and lsMax
+    print(binary_search(ls1, 1000))
+
+
+if __name__ == "__main__":
+    main()

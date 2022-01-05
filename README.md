@@ -1,2 +1,2 @@
 # algorithms
-programs from Grokking Algorithms
+programs from Grokking Algorithms and other sources
